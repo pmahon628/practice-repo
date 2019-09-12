@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <style>
+    .green {
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="button">Click Me!</button>
+  <h2>My header 1</h2>
+  <h2>My header 2</h2>
+  <h2>My header 3</h2>
+  <h2>My header 4</h2>
+  <h2>My header 5</h2>
+
+  <script>
+    // 1. Select an element
+    // 2. Listen for an event
+    $('#button').on("click", function () {
+      // 3. Do something when that event fires
+      console.log('Clicked!');
+    });
+
+    // 1. Select multiple elemnts
+    // 2. Listen for events
+    $('h2').on("mouseover", function () {
+      // Do something when that event fires
+      console.log('Mouse over!');
+
+      // '$(this)' points to a jQuery wrapped version of the element that the event was fired on
+      $(this).addClass('green');
+    })
+  </script>
+</body>
+
+</html>
